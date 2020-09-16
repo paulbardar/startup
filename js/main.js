@@ -10,6 +10,7 @@ $(function(){
        }
      );
  });
+ // slider
 
   $('.about-us__team').owlCarousel({
     loop: false,
