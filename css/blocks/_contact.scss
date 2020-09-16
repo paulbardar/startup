@@ -1,0 +1,130 @@
+.contact {
+  padding: 100px 0;
+  &__header {
+    // text-align: center;
+  }
+  &__title {
+    @include section-title;
+  }
+  &__subtitle {
+    @include section-subtitle;
+  }
+}
+
+.address-block {
+  padding-left: 30px;
+  margin-bottom: 35px;
+  position: relative;
+  .block-title {
+    @include block-title;
+    // position: relative;
+    // text-transform: uppercase;
+    // font-weight: bold;
+    // margin-bottom: 15px;
+    // &:before {
+    //   position: absolute;
+    //   // content: "";
+    //   left: -20px;
+    //   top: 2px;
+    // }
+    &__address {
+      &:before {
+        content: url('../img/address.png');
+      }
+    }
+  }
+  &__address {
+    font-size: $fsAddress;
+  }
+}
+.hotline-block {
+  padding-left: 30px;
+  margin-bottom: 35px;
+  position: relative;
+  .block-title {
+    @include block-title;
+    &__hotline {
+      &:before {
+        content: url('../img/phone.png');
+      }
+    }
+  }
+  .phone-block {
+    max-width: 60%;
+  }
+  .phone-link {
+    font-size: $fsAddress;
+    color: $primaryColor;
+    &:hover {
+      color: $activeLinkColor;
+    }
+  }
+}
+.email-block {
+  padding-left: 30px;
+  position: relative;
+  .block-title {
+    @include block-title;
+    &__email {
+      &:before {
+        content: url('../img/email.png');
+      }
+    }
+  }
+  &__link {
+    font-size: $fsAddress;
+    color: $primaryColor;
+    display: block;
+    text-align: left;
+    &:hover {
+      color: $activeLinkColor;
+    }
+  }
+}
+.contact-form {
+  &__body {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    input {
+      width: 48%;
+      padding: 16px 22px;
+      border: 1px $primaryColor solid;
+      margin-bottom: 22px;
+      &::placeholder {
+        text-transform: uppercase;
+      }
+      &:active,
+      &:focus {
+        border-color: $activeLinkColor;
+        outline: none;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 130px;
+      padding: 16px 22px;
+      border: 1px $primaryColor solid;
+      margin-bottom: 22px;
+      &:active,
+      &:focus {
+        border-color: $activeLinkColor;
+        outline: none;
+      }
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__btn {
+    padding: 16px 37px;
+    &:hover {
+      color: $whiteColor;
+    }
+  }
+}

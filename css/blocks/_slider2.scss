@@ -1,0 +1,58 @@
+.slider2 {
+  background: $secoindaryBgColor;
+  padding: 100px 0;
+}
+.phrase-slider {
+  &__item {
+
+  }
+  &__images {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 74px;
+
+  }
+  &__img {
+    margin-left: 60px;
+    display: inline-block;
+    // align-self: center;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__phrase {
+    max-width: 794px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $fsPhrase;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  &__author {
+    text-align: center;
+    font-size: $fsPhrase;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+  }
+  .owl-dots {
+    .owl-dot {
+      width: 13px;
+      height: 13px;
+      margin-left: 10px;
+      &:focus {
+        outline: none;
+      }
+      &.active {
+        span {
+          background: $activeLinkColor;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

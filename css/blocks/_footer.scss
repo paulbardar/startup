@@ -1,0 +1,47 @@
+.footer {
+  padding: 100px 0;
+  background: $footerBgColor;
+  &__socials {
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      left: 50%;
+      bottom: -30px;
+      background-color: $whiteColor;
+      transform: translateX(-50%);
+    }
+    .social-link {
+      margin-left: 30px;
+      position: relative;
+      display: inline-block;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      border: 2px solid $whiteColor;
+      &:first-child {
+        margin-left: 0;
+      }
+      img {
+        position: relative;
+        top: 2px;
+        transition: all .3s ease-in;
+      }
+      &:hover {
+        border-color: blue;
+        img {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+  &__rights {
+    text-align: center;
+    color: $whiteColor;
+    text-transform: uppercase;
+  }
+}

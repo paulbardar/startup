@@ -1,0 +1,35 @@
+.services {
+  padding: 100px 0;
+  text-align: center;
+  &__title {
+    margin-bottom: 60px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include after-title-line;
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 2px;
+    //   width: 50px;
+    //   left: 50%;
+    //   bottom: -30px;
+    //   background-color: $primaryColor;
+    //   transform: translateX(-50%);
+    // }
+  }
+  &__text {
+    font-size: $fsSecondary;
+    margin-bottom: 70px;
+  }
+  .service-item {
+    &__img {
+      margin-bottom: 30px;
+    }
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@mixin after-title-line {
+  &:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 50%;
+    bottom: -30px;
+    background-color: $primaryColor;
+    transform: translateX(-50%);
+  }
+}
+@mixin section-title {
+  margin-bottom: 60px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 50%;
+    bottom: -30px;
+    background-color: $primaryColor;
+    transform: translateX(-50%);
+  }
+}
+@mixin section-subtitle {
+  font-size: $fsSecondary;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@mixin block-title {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+  &:before {
+    position: absolute;
+    // content: "";
+    left: -30px;
+    top: 2px;
+  }
+}

@@ -1,0 +1,124 @@
+.works {
+  padding: 100px 0;
+  &__title {
+    @include section-title;
+  }
+  &__categories {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 70px;
+  }
+  &__category {
+    margin-left: 24px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    color: $primaryColor;
+    &.active {
+      color: $activeLinkColor;
+    }
+    &:first-child {
+      font-size: $fsSecondary;
+    }
+    &:hover {
+      color: $activeLinkColor;
+    }
+  }
+  &__block {
+    .work-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.section-header {
+  text-align: center;
+}
+
+.work-item {
+  position: relative;
+  &__image {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $worksBgColor;
+      opacity: 0;
+      transition: .5s ease;
+    }
+    // &:hover {
+    //   &:before {
+    //     opacity: 0.702;
+    //   }
+    // }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 10;
+    color: $whiteColor;
+  }
+  &__name {
+    margin-bottom: 18px;
+    text-transform: capitalize;
+  }
+  &__text {
+    font-size: $fsForm;
+    margin-bottom: 27px;
+  }
+  &__link {
+    font-size: $fsPrimary;
+    text-transform: uppercase;
+    color: $linksHoverColor;
+    line-height: 1.7;
+    background: $whiteColor;
+    padding: 10px 40px 10px 20px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 22px;
+      top: 15px;
+      border: solid $linksHoverColor;
+      border-width: 0 2px 2px 0;
+      padding: 5px;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      background: green;
+      color: $whiteColor;
+    }
+  }
+  &:hover {
+    .work-item__image {
+      &:before {
+        opacity: 0.702;
+      }
+    }
+    .work-item__overlay {
+      opacity: 1;
+    }
+  }
+}
